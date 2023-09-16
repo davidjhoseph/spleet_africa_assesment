@@ -9,22 +9,22 @@
       <div
         class="grid grid-cols-1 mt-6 text-white lg:w-3/6 lg:mt-0 gap-y-6 md:gap-y-0 sm:grid-cols-2 md:grid-cols-3 md:gap-6 lg:gap-8">
         <div class="space-y-3 text-sm font-light">
-          <div class="text-xl font-medium">Features</div>
-          <a href="#" class="block text-lg">Events discovery</a>
-          <a href="#" class="block text-lg">Ticketing</a>
+          <div class="text-lg font-medium md:text-xl">Features</div>
+          <a href="#" class="block text-md md:text-lg">Events discovery</a>
+          <a href="#" class="block text-md md:text-lg">Ticketing</a>
         </div>
         <div class="space-y-3 text-sm font-light">
-          <div class="text-xl font-medium">Company</div>
-          <a href="#" class="block text-lg">About us</a>
-          <a href="#" class="block text-lg">FAQs</a>
-          <a href="#" class="block text-lg">Careers</a>
-          <a href="#" class="block text-lg">Support</a>
+          <div class="text-lg font-medium md:text-xl">Company</div>
+          <a href="#" class="block text-md md:text-lg">About us</a>
+          <a href="#" class="block text-md md:text-lg">FAQs</a>
+          <a href="#" class="block text-md md:text-lg">Careers</a>
+          <a href="#" class="block text-md md:text-lg">Support</a>
         </div>
         <div class="space-y-3 text-sm font-light">
-          <div class="text-xl font-medium">Contact us</div>
-          <a href="mailto:info@events.com" class="block text-lg">info@events.com</a>
-          <div class="text-lg">+234 701 345 6789</div>
-          <div class="text-lg">Race Course, 8/9 Marina, Onikan, Lagos Lagos, 4aa Force Rd, Lagos Island 102273, Lagos</div>
+          <div class="text-lg font-medium md:text-xl">Contact us</div>
+          <a href="mailto:info@events.com" class="block text-md md:text-lg">info@events.com</a>
+          <div class="text-md md:text-lg">+234 701 345 6789</div>
+          <div class="text-md md:text-lg">Race Course, 8/9 Marina, Onikan, Lagos Lagos, 4aa Force Rd, Lagos Island 102273, Lagos</div>
         </div>
       </div>
     </div>
