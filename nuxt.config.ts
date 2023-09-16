@@ -4,10 +4,17 @@ export default defineNuxtConfig({
   css: [
     '~/assets/css/main.css',
   ],
+  modules: ['@pinia/nuxt', '@pinia-plugin-persistedstate/nuxt',],
   postcss: {
     plugins: {
       tailwindcss: {},
       autoprefixer: {},
     },
+  },
+  pinia: {
+    autoImports: [
+      // automatically imports `defineStore`
+      'defineStore', // import { defineStore } from 'pinia'
+    ],
   },
 })

@@ -17,7 +17,19 @@
 </template>
 
 <script setup lang="ts">
+import { useMainStore } from '@/store'
+
 definePageMeta({
   layout: false
 })
+const store = useMainStore();
+// const { data: events } = await useAsyncData(
+//   'events',
+//   () => $fetch('https://rendezvous-events.onrender.com/events', {
+//     // params: {
+//     //   page: page.value
+//     // }
+//   }), {
+//   }
+// )
 </script>
