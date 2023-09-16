@@ -10,9 +10,9 @@
         <div class="px-4 py-4">
             <div class="font-semibold text-[16px]">{{ event.title }}</div>
             <div class="flex items-center space-x-2 font-light">
-                <div>Sun, Oct 3rd</div>
+                <div>{{dConvert(event.date, 'ddd, MMM Do')}}</div>
                 <div class="w-1 h-1 bg-black rounded-full"></div>
-                <div>6pm</div>
+                <div>{{ tConvert(event.time) }}</div>
             </div>
             <div class="mt-6 font-light line-clamp-2">{{ event.description }}</div>
             <button class="flex items-center mt-6 space-x-1" @click="goToEvent">
@@ -23,7 +23,8 @@
     </div>
 </template>
 <script setup lang="ts">
-import { IEvent } from '@types'
+import { IEvent } from '@/types'
+import { tConvert, dConvert } from '@/helpers/general'
 const props = defineProps({
     event: {
         type: Object as PropType<IEvent>,
@@ -33,4 +34,5 @@ const props = defineProps({
 const goToEvent = () => {
     navigateTo(`/event/${props.event.id}`)
 }
+
 </script>

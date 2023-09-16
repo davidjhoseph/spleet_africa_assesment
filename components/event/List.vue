@@ -1,6 +1,6 @@
 <template>
     <div class="my-12">
-        <div class="flex items-center justify-between">
+        <div class="flex items-center justify-between px-4 md:px-0">
             <div class="text-[32px]">Trending events</div>
             <button class="flex items-center space-x-1">
                 <div class="text-purple">View all trending events</div>
@@ -16,7 +16,7 @@
                 <span class="sr-only">Loading...</span>
             </div>
         </div>
-        <div class="grid gap-4 mt-12 md:grid-cols-2 lg:grid-cols-3" v-else>
+        <div class="grid gap-6 px-4 mt-12 md:px-0 md:grid-cols-2 lg:grid-cols-3" v-else>
             <Event v-for="event in events" :event="event" :key="event.id" />
         </div>
     </div>

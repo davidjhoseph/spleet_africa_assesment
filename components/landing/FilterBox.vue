@@ -1,5 +1,5 @@
 <template>
-    <div class="flex items-center justify-between p-6 bg-white rounded-xl">
+    <div class="flex flex-wrap items-center justify-between p-6 bg-white rounded-xl">
         <div class="flex items-center pr-3 space-x-2 border-r-2 border-gray-50 text-gray-20">
             <IconsSearch class="w-5 h-5" />
             <input v-model="search"
@@ -10,7 +10,6 @@
             <option :value="null" disabled selected hidden>Categories</option>
             conference others summit musical fundraising fitness meetup others
             <option v-for="(c, i) in categories" :key="i" class="uppercase" :value="c">{{ c }}</option>
-            <option class="uppercase" value="others">Others</option>
         </select>
         <BaseButton class="ml-5" @click="setFilter">Search</BaseButton>
     </div>

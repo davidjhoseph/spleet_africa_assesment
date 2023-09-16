@@ -1,6 +1,5 @@
 <template>
     <div class="lg:px-12 md:px-10">
-        <div>{{ event }}</div>
         <div class="h-[300px] flex items-center justify-center" v-if="loading">
             <div role="status">
                 <svg aria-hidden="true" class="w-8 h-8 mr-2 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -21,11 +20,11 @@
                         <div class="flex items-center space-x-4">
                             <div class="flex items-center space-x-1">
                                 <IconsCalendar class="w-4 h-4 text-purple-20" />
-                                <div class="font-light text-[16px]">Sunday, October 3rd, 2023</div>
+                                <div class="font-light text-[16px]">{{dConvert(event.date)}}</div>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <IconsTime class="w-4 h-4 text-purple-20" />
-                                <div class="font-light text-[16px]">6PM</div>
+                                <div class="font-light text-[16px]">{{ tConvert(event.time) }}</div>
                             </div>
                         </div>
                         <div class="flex items-center mt-2 space-x-1">
@@ -66,8 +65,8 @@
                             <img src="@/assets/icons/instagram.svg" alt="">
                         </a>
                     </div>
-                    <div class="font-semibold text-[16px] mt-12">Directions</div>
-                    <img src="@/assets/images/map.png" class="mt-5">
+                    <div class="font-semibold text-[16px] mt-12 mb-6">Directions</div>
+                    <EventGoogleMap :data="{lat: event.lat, long: event.long}"/>
                 </div>
             </div>
         </template>
@@ -76,6 +75,8 @@
 </template>
 <script setup>
 import { useMainStore } from '@/store'
+import { tConvert, dConvert } from '@/helpers/general'
+
 const store = useMainStore();
 const event = computed(() => store.getSingleEvent);
 const { currencyString } = useUtils(event.value.price)
@@ -84,5 +85,4 @@ const route = useRoute();
         store.fetchEventById(route.params.id);
     })
 const loading = computed(() => store.loading);
-
 </script>

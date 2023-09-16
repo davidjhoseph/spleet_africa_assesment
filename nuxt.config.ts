@@ -11,6 +11,11 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
+  runtimeConfig: {
+    public: {
+      google_api_key: process.env.GOOGLE_API_KEY || "default_api_url"
+    }
+  },
   pinia: {
     autoImports: [
       // automatically imports `defineStore`
