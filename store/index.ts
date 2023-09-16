@@ -9,7 +9,7 @@ export const useMainStore = defineStore({
         getEvents: (state) => state.events
     },
     actions: {
-        async getEvents()  {
+        async fetchEvents()  {
             const response = await fetch('https://rendezvous-events.onrender.com/events');
             console.log(response);
         },
