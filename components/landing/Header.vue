@@ -1,10 +1,7 @@
 <template>
-  <header class="px-4 py-12 bg-white md:px-6 lg:px-10">
-    <div class="flex flex-wrap items-center justify-between">
-      <button class="text-purple" >
+    <header class="z-50 flex flex-wrap items-center justify-between px-6 py-4 bg-white md:rounded-xl bg-opacity-60">
         <IconsLogo class="w-52" @click="navigateTo('/')"/>
-      </button>
-      <div
+        <div
         class="cursor-pointer md:hidden text-purple"
         @click="isMenuOpen = true"
       >
@@ -23,8 +20,7 @@
           />
         </svg>
       </div>
-
-      <nav
+        <nav
         :class="[
           'items-center justify-center space-x-20 font-semibold text-purple hidden md:flex',
         ]"
@@ -38,8 +34,7 @@
         <button class="font-semibold select-none hover:opacity-75 text-purple">Login</button>
         <BaseButton>Sign up</BaseButton>
       </div>
-    </div>
-    <div
+      <div
       class="fixed inset-0 z-50 w-screen h-screen p-6 transition-all duration-200 ease-linear transform bg-white"
       :class="
         isMenuOpen
@@ -71,8 +66,9 @@
         <BaseButton>Sign up</BaseButton>
       </nav>
     </div>
-  </header>
+    </header>
 </template>
+
 <script setup lang="ts">
 const isMenuOpen = ref(false)
 </script>
