@@ -4,7 +4,7 @@
             <img :src="event.imageUrl"
                 class="object-cover w-full absolute inset-0 h-full duration-300 ease-linear transform group-hover:scale-[1.2]" />
             <div
-                class="absolute z-50 px-6 py-1 text-white capitalize bg-blue-800 bg-opacity-75 border border-blue-500 rounded-full top-5 right-5">
+                class="absolute z-10 px-6 py-1 text-white capitalize bg-blue-800 bg-opacity-75 border border-blue-500 rounded-full top-5 right-5">
                 {{ event.category }}</div>
         </div>
         <div class="px-4 py-4">
