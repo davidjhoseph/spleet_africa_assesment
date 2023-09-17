@@ -79,7 +79,7 @@ import { tConvert, dConvert } from '@/helpers/general'
 
 const store = useMainStore();
 const event = computed(() => store.getSingleEvent);
-const { currencyString } = useUtils(event.value.price)
+const { currencyString } = useUtils(event.value?.price ?? 0);
 const route = useRoute();
     onMounted(() => {
         store.fetchEventById(route.params.id);
