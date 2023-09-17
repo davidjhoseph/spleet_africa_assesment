@@ -1,9 +1,9 @@
 <template>
     <div class="my-12">
-        <div class="flex items-center justify-between px-4 md:px-0">
-            <div class="text-[32px]">Trending events</div>
+        <div class="items-center justify-between px-4 space-y-4 xs:space-y-0 xs:flex md:px-0">
+            <div class="text-[26px] md:text-[32px]">Trending events</div>
             <button class="flex items-center space-x-1">
-                <div class="text-purple">View all trending events</div>
+                <div class="text-sm text-purple md:text-lg">View all trending events</div>
                 <IconsArrowCurve class="w-4 h-4 text-purple"/>
             </button>
         </div>

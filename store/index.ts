@@ -19,9 +19,12 @@ export const useMainStore = defineStore({
         getEvents: (state) => {
             if(!state.filter.search.length && !state.filter.category) return state.events;
             if(state.filter.search.length){
-                return state.events.filter((e: IEvent) => {
-                    return e.title.toLowerCase().includes(state.filter.search.toLowerCase()) ||  e.description.toLowerCase().includes(state.filter.search.toLowerCase());
-                });
+                // I initially searched by title and description
+                // return state.events.filter((e: IEvent) => {
+                //     return e.title.toLowerCase().includes(state.filter.search.toLowerCase()) ||  e.description.toLowerCase().includes(state.filter.search.toLowerCase());
+                // });
+                return state.events.filter((e: IEvent) => e.title.toLowerCase().includes(state.filter.search.toLowerCase()));
+
             }
             if(state.filter.category){
                 return state.events.filter((e: IEvent) => {

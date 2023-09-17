@@ -1,8 +1,8 @@
 <template>
-  <header class="px-4 py-12 bg-white md:px-6 lg:px-10">
+  <header class="px-4 py-6 bg-white md:py-12 md:px-6 lg:px-10">
     <div class="flex flex-wrap items-center justify-between">
       <button class="text-purple">
-        <IconsLogo class="w-52" @click="navigateTo('/')" />
+        <IconsLogo class="w-32 md:w-48 lg:w-52" @click="navigateTo('/')" />
       </button>
       <div
         class="cursor-pointer md:hidden text-purple"
@@ -23,7 +23,7 @@
 
       <nav
         :class="[
-          'items-center justify-center space-x-20 font-semibold text-purple hidden md:flex',
+          'items-center justify-center md:space-x-6 lg:space-x-20 font-semibold text-purple hidden md:flex',
         ]">
         <button class="font-semibold select-none hover:opacity-75">Discover</button>
         <button class="font-semibold select-none hover:opacity-75">About us</button>

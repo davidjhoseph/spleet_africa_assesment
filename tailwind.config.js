@@ -10,6 +10,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        'xs': '450px',
+      },
       colors: {
         purple: {
           DEFAULT: "#432361",
