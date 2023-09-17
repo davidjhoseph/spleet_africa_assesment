@@ -16,9 +16,20 @@
                 <span class="sr-only">Loading...</span>
             </div>
         </div>
-        <div class="grid gap-6 px-4 mt-12 md:px-0 md:grid-cols-2 lg:grid-cols-3" v-else>
-            <Event v-for="event in events" :event="event" :key="event.id" />
-        </div>
+        <template v-else>
+            <div class="grid gap-6 px-4 mt-12 md:px-0 md:grid-cols-2 lg:grid-cols-3" v-if="events.length ">
+                <Event v-for="event in events" :event="event" :key="event.id" />
+            </div>
+            <div v-else-if="isFilterActive && events.length === 0" class="flex flex-col items-center justify-center w-full py-6 space-y-4">
+                <img src="@/assets/icons/sad-face.svg"/>
+                <div>No events found for this search</div>
+            </div>
+            <div v-else class="flex flex-col items-center justify-center w-full py-6 space-y-4">
+                <img src="@/assets/icons/sad-face.svg"/>
+                <div>No events available</div>
+                
+            </div>
+        </template>
     </div>
 </template>
 <script setup>
@@ -27,5 +38,6 @@ import { useMainStore } from '@/store'
 const store = useMainStore()
 const events = computed(() => store.getEvents);
 const loading = computed(() => store.loading);
+const isFilterActive = computed(() => store.filter.category !== null || store.filter.search.length > 0)
 
 </script>

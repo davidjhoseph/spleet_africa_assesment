@@ -9,6 +9,7 @@ export const useMainStore = defineStore({
             events: [],
             singleEvent: {} as IEvent,
             loading: false,
+            catchLongLoading: false,
             filter: {
                 category: null,
                 search: ''
