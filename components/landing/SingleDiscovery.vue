@@ -1,5 +1,5 @@
 <template>
-    <div class="h-[240px] rounded-md relative group overflow-hidden cursor-pointer">
+    <div class="h-[240px] rounded-lg relative group overflow-hidden cursor-pointer">
         <div class="absolute inset-0 z-10 flex items-center justify-center w-full h-full text-white bg-black bg-opacity-50">
             {{discovery.title}}</div>
         <img :src="images[discovery.image]"

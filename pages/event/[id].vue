@@ -56,13 +56,13 @@
                     <div class="font-semibold text-[16px]">Contact organizers</div>
                     <div class="flex items-center mt-4 space-x-5">
                         <a :href="`mailto:${event.organizer.email}`">
-                            <img src="@/assets/icons/email.svg" alt="">
+                            <img src="@/assets/icons/email.svg" alt=""/>
                         </a>
-                        <a :href="event.organizer.twitterUrl">
-                            <img src="@/assets/icons/twitter.svg" alt="">
+                        <a :href="event.organizer.twitterUrl" target="_blank">
+                            <img src="@/assets/icons/twitter.svg" />
                         </a>
-                        <a :href="event.organizer.instagram">
-                            <img src="@/assets/icons/instagram.svg" alt="">
+                        <a :href="event.organizer.instagram" target="_blank">
+                            <img src="@/assets/icons/instagram.svg" />
                         </a>
                     </div>
                     <div class="font-semibold text-[16px] mt-12 mb-6">Directions</div>
